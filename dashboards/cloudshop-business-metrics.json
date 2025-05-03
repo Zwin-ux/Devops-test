@@ -1,0 +1,34 @@
+{
+  "annotations": {
+    "list": [
+      {
+        "builtIn": 1,
+        "type": "dashboard"
+      }
+    ]
+  },
+  "panels": [
+    {
+      "type": "stat",
+      "title": "Orders per Minute",
+      "targets": [
+        {
+          "expr": "sum(rate(order_created_total[1m]))",
+          "refId": "A"
+        }
+      ]
+    },
+    {
+      "type": "stat",
+      "title": "Cart Additions per Minute",
+      "targets": [
+        {
+          "expr": "sum(rate(cart_add_total[1m]))",
+          "refId": "B"
+        }
+      ]
+    }
+  ],
+  "title": "CloudShop Business Metrics",
+  "refresh": "30s"
+}

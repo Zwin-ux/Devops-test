@@ -1,0 +1,57 @@
+apiVersion: networking.istio.io/v1beta1
+kind: Gateway
+metadata:
+  name: cloudshop-gateway
+spec:
+  selector:
+    istio: ingressgateway
+  servers:
+    - port:
+        number: 80
+        name: http
+        protocol: HTTP
+      hosts:
+        - "*"
+---
+apiVersion: networking.istio.io/v1beta1
+kind: VirtualService
+metadata:
+  name: cloudshop-virtualservice
+spec:
+  hosts:
+    - "*"
+  gateways:
+    - cloudshop-gateway
+  http:
+    - match:
+        - uri:
+            prefix: "/auth"
+      route:
+        - destination:
+            host: auth-service
+            port:
+              number: 80
+    - match:
+        - uri:
+            prefix: "/product"
+      route:
+        - destination:
+            host: product-service
+            port:
+              number: 80
+    - match:
+        - uri:
+            prefix: "/cart"
+      route:
+        - destination:
+            host: cart-service
+            port:
+              number: 80
+    - match:
+        - uri:
+            prefix: "/order"
+      route:
+        - destination:
+            host: order-service
+            port:
+              number: 80
