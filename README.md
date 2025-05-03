@@ -11,6 +11,7 @@ CloudShop is a cloud-native e-commerce platform built to showcase modern DevOps,
 - End-to-end CI/CD with GitHub Actions
 
 ---
+![image](https://github.com/user-attachments/assets/1477d034-ba82-4a3d-83eb-72ead8d5c074)
 
 ## 🏗️ Architecture
 
