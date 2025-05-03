@@ -1,6 +1,6 @@
 # CloudShop
 
-(this does not work yet but im making it public to put pressure to finish itt)
+(this does not work yet but im making it public to put pressure to finish itt the goal for this project is to learn how to use Devops/services )
 
 CloudShop is a cloud-native e-commerce platform built to showcase modern DevOps, microservices, and cloud infrastructure skills. It features:
 - Microservices architecture (auth, product, cart, order)
