@@ -121,7 +121,7 @@ terraform apply
 
 ---
 
-## 🏆 What’s Implemented
+## 🏆 What’s ATTEMPTED to b e  Implemented (i suck :( )
 - Multi-stage Dockerfiles, non-root users, healthchecks
 - K8s manifests with liveness/readiness probes, Ingress, Istio, Secrets
 - CI/CD with test, lint, build, scan, push, and deploy
