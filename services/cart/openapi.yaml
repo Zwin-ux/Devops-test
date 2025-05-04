@@ -1,0 +1,78 @@
+openapi: 3.0.1
+info:
+  title: Cart Service API
+  version: 1.0.0
+paths:
+  /cart:
+    get:
+      summary: Get all carts
+      responses:
+        '200':
+          description: List of carts
+    post:
+      summary: Add item to cart
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                userId:
+                  type: string
+                productId:
+                  type: string
+                quantity:
+                  type: integer
+      responses:
+        '200':
+          description: Item added to cart
+  /cart/remove:
+    delete:
+      summary: Remove item from cart
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                userId:
+                  type: string
+                productId:
+                  type: integer
+              required:
+                - userId
+                - productId
+      responses:
+        '200':
+          description: Item removed
+        '400':
+          description: Invalid data
+        '404':
+          description: Cart or product not found
+  /cart/clear:
+    delete:
+      summary: Clear cart for user
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                userId:
+                  type: string
+              required:
+                - userId
+      responses:
+        '200':
+          description: Cart cleared
+        '400':
+          description: userId is required
+  /health:
+    get:
+      summary: Health check
+      responses:
+        '200':
+          description: Service is healthy

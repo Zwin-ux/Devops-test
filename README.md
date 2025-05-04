@@ -41,6 +41,33 @@ graph TD
 
 ---
 
+## 🎨 Frontend Development
+
+### Recent Enhancements
+- Implemented responsive UI with TailwindCSS
+- Built key pages:
+  - Product listings with cards
+  - Cart management with quantity controls
+  - Order history with expandable details
+  - Login/Register forms with validation
+- Configured CRACO for Tailwind + Create React App integration
+
+### Running Locally
+```bash
+cd frontend
+npm install
+npm start
+```
+
+## ➡️ Next Steps
+1. Resolve TailwindCSS build issues (current blocker)
+2. Implement user authentication flows
+3. Add payment processing integration
+4. Enhance test coverage (Jest + React Testing Library)
+5. Dockerize frontend for Kubernetes deployment
+
+---
+
 ## 🚀 Quick Start
 
 ### 1. Clone and Install
